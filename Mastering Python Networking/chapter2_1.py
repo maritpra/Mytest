@@ -19,5 +19,6 @@ for device in devices.keys():
     child.expect(device_prompt)
     child.sendline('show ver | i V')
     child.expect(device_prompt)
+    ver = child.before
     print(child.before)
     child.sendline('exit')
