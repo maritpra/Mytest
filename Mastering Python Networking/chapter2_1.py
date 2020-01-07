@@ -3,8 +3,8 @@
 import pexpect
 
 devices = {
-    'R1':{'prompt':'#R1', 'ip':'192.168.122.14'},
-    'R2':{'prompt':'#R2', 'ip':'192.168.122.25'}
+    'R1':{'prompt':'R1#', 'ip':'192.168.122.14'},
+    'R2':{'prompt':'R2#', 'ip':'192.168.122.25'}
 }
 username="cisco"
 password="cisco"
