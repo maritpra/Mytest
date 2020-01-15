@@ -3,12 +3,13 @@
 import paramiko
 import getpass
 import time
+import json
 
-devices = {
-    'R1': {'ip': '192.168.122.14'},
-    'R4': {'ip': '192.168.122.252'}
-    }
-commands = ['show version\n', 'show run\n']
+with open('/home/maritpra/Mytest/Mastering Python Networking/chapter_2/devices.json', 'r') as f:
+    devices = json.load(f)
+
+with open('/home/maritpra/Mytest/Mastering Python Networking/chapter_2/commands.txt', 'r') as f:
+    commands = json.load(f)
 
 max_buffer = 10000
 def clear_buffer(connection):
