@@ -9,7 +9,7 @@ with open('/home/maritpra/Mytest/Mastering Python Networking/chapter_2/devices.j
     devices = json.load(f)
 
 with open('/home/maritpra/Mytest/Mastering Python Networking/chapter_2/commands.txt', 'r') as f:
-    commands = json.load(f)
+    commands = [line for line in f.readlines()]
 
 max_buffer = 10000
 def clear_buffer(connection):

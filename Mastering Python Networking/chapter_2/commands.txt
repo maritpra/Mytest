@@ -2,3 +2,5 @@ config t
 logging buffer 30000
 end
 copy run start
+\n
+
