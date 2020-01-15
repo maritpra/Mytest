@@ -21,10 +21,9 @@ for device in devices.keys():
     child.expect('Password')
     child.sendline(password)
     child.expect(device_prompt)
-    with open('outputFileName', 'wb') as f:
+    with open(outputFileName, 'wb') as f:
         for command in commands:
             child.sendline(command)
             child.expect(device_prompt)
             f.write(child.before)
-            child.logout()
-            
+        child.sendline('exit')
