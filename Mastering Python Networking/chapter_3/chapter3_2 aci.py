@@ -37,7 +37,5 @@ def gettenant(apic_ip, cookie):
 thetoken = gettoken(controller, user, password)
 #print(thetoken)
 tenants = gettenant(controller, thetoken)
-#print(tenants['imdata'])
-#json_object = json.loads(tenants['imdata'])
 tenants_formatted = json.dumps(tenants, indent=2)
 print(tenants_formatted)
