@@ -30,14 +30,14 @@ def gettoken(apic_ip, user, password):
 
 def gettenant(apic_ip, cookie):
   url = apic_ip + "/api/node/class/fvTenant.json"
-  #header = {'content-type':'application-json', 'X-Auth-Token':cookie}
-  #header = {'content-type':'application-json', 'APIC-Cookie':token}
-  #payload = {}
   response = requests.get(url, cookies=cookie, verify=False)
-  r_json = response.json()
-  return r_json
+  r_json2 = response.json()
+  return r_json2
 
 thetoken = gettoken(controller, user, password)
-print(thetoken)
+#print(thetoken)
 tenants = gettenant(controller, thetoken)
-print(tenants)
+#print(tenants['imdata'])
+#json_object = json.loads(tenants['imdata'])
+tenants_formatted = json.dumps(tenants, indent=2)
+print(tenants_formatted)
