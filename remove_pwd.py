@@ -3,7 +3,7 @@ import re
 import os
 
 # Define the parameters
-file_path = '/Users/maritprachyabrued/Documents/code/Noen_Phlap_Wan_7-4_2702_202411131002.conf'
+file_path = '/Users/maritprachyabrued/Documents/data/Noen_Phlap_Wan_7-4_2702_202411131002.conf'
 
 # Define the new file path with "_pwdremoved" added to the original filename
 base_name, ext = os.path.splitext(file_path)
