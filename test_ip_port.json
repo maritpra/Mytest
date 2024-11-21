@@ -1,0 +1,7 @@
+[
+    {"host": "10.200.5.100", "protocol": "icmp"},
+    {"host": "10.200.5.100", "protocol": "tcp", "port": 23},
+    {"host": "10.200.5.100", "protocol": "tcp", "port": 80},
+    {"host": "10.200.5.100", "protocol": "udp", "port": 53},
+    {"host": "8.8.8.8", "protocol": "icmp"}
+]
