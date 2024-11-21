@@ -2,6 +2,7 @@
 
 import json
 import socket
+import subprocess
 from scapy.all import IP, ICMP, sr1
 
 def test_tcp_port(host, port):
@@ -42,6 +43,16 @@ def test_icmp(host):
     except Exception as e:
         print(f"Error testing ICMP Ping to {host}: {e}")
 
+def test_icmp_with_ping(host):
+    try:
+        result = subprocess.run(["ping", "-c", "1", host], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if result.returncode == 0:
+            print(f"ICMP Ping to {host} is ALLOWED.")
+        else:
+            print(f"ICMP Ping to {host} is BLOCKED or UNREACHABLE.")
+    except Exception as e:
+        print(f"Error testing ICMP Ping to {host}: {e}")
+
 def test_hosts_with_protocols(test_list):
     """Test hosts with specified protocols."""
     for test in test_list:
@@ -52,7 +63,7 @@ def test_hosts_with_protocols(test_list):
         print(f"Testing Host: {host}, Protocol: {protocol}")
         if protocol.lower() == "icmp":
             print(f"  Testing ICMP Ping to {host}...")
-            test_icmp(host)
+            test_icmp_with_ping(host)
         elif protocol.lower() == "tcp" and port is not None:
             print(f"  Testing TCP Port {port}...")
             test_tcp_port(host, port)
