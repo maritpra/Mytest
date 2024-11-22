@@ -1,0 +1,5 @@
+[
+    {"testid": 1, "srcip": "10.242.5.101", "srcport": "10000", "dstip": "10.200.5.101", "dstport": "443", "protocol": "tcp", "srcintf": "port3"},
+    {"testid": 2, "srcip": "10.242.5.101", "srcport": "10000", "dstip": "10.200.5.101", "dstport": "23", "protocol": "tcp", "srcintf": "port3"},
+    {"testid": 3, "srcip": "10.242.5.101", "srcport": "10000", "dstip": "10.200.5.101", "dstport": "53", "protocol": "udp", "srcintf": "port3"}
+]
