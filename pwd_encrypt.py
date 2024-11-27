@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/local/bin/python3
 
 # Type 7 Decryption and Encryption Example
 TYPE7_KEY = "dsfd;kfoA,.iyewrkldJKDHSUB"
